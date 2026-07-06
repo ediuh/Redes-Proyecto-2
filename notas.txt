@@ -1,0 +1,35 @@
+-Bloque IPv4 propuesto: 192.168.0.0/16
+  - Casa Matriz: 192.168.1.0/24
+
+  - Sucursal Norte:
+     - VLAN 10 (Administración): 192.168.2.0/26 (IPs: .1 a .62 | Gateway: 192.168.2.1)
+     - VLAN 20 (Clientes): 192.168.2.0/26 (IPs: .65 a .126 | Gateway: 192.168.2.65)
+
+  - Sucursal Sur:
+     - VLAN 30 (Administración): 192.168.3.0/26 (IPs: .1 a .62 | Gateway: 192.168.3.1)
+     - VLAN 40 (Clientes): 192.168.3.64/26 (IPs: .65 a .126 | Gateway: 192.168.3.65)
+
+
+  - Enlaces WAN
+     - Matriz a Norte: 10.0.0.0/30 (IPs útiles: 10.0.0.1 y 10.0.0.2)
+     - Matriz a Sur: 10.0.0.4/30 (IPs útiles: 10.0.0.5 y 10.0.0.6)
+
+
+-Bloque IPv6 propuesto: Segmentación en el 4° hexteto
+   - Casa Matriz: 
+     - 2001:db8:aaaa:1::/64
+
+   - Sucursal Norte: 
+     - 2001:db8:aaaa:2::/64 (VLAN 10)
+     - 2001:db8:aaaa:22::/64 (VLAN 20)
+
+   - Sucursal Sur: 
+     - 2001:db8:aaaa:3::/64 (VLAN 30)
+     - 2001:db8:aaaa:33::/64 (VLAN 40)
+
+    
+
+-Contraseñas: 
+  -class
+  -cisco
+  -cisco
